@@ -1,0 +1,30 @@
+main{
+    min-height: 700px;
+}
+h1.display-3{
+    color: #6a9cff;;
+}
+.btn-outline-secondary:hover{
+    background-color: #6a9cff;
+}
+
+.picture{
+    width:100px;
+    min-height: 1%;
+    padding-left: 15px;
+    padding-right: 15px;
+    display:inline-block;
+    box-sizing: border-box;
+    float: right;
+}
+div.jumbotron{
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+}
+#addBtn{
+    padding-top:2%;
+}
+img {
+    z-index: -1;
+}

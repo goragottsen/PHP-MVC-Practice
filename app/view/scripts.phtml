@@ -1,0 +1,44 @@
+<script>
+    //Search the contact table function
+    function mySearch() {
+        var input, filter, table, tr, td, i;
+        input = document.getElementById("search-input");
+        filter = input.value.toUpperCase();
+        //filter = filter.split(" ");
+        table = document.getElementById("viewTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td");
+            if (td) {
+                if (td[0].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                }else if(td[1].innerHTML.toUpperCase().indexOf(filter) > -1){
+                    tr[i].style.display = "";
+                }
+                else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+    //End of the search function
+    //Function for disabling form submissions if there are invalid fields (Bootstrap)
+    (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+            var form = document.getElementById('needs-validation');
+            form.addEventListener('submit', function(event) {
+                if (form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            }, false);
+        }, false);
+    })();
+    //Go Back button function
+    function goBack() {
+        window.history.back();
+    }
+
+</script>

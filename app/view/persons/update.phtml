@@ -1,0 +1,81 @@
+    <div class="jumbotron">
+        <div class="container">
+            <?php if(is_array($person_to_update)): ?>
+                <form action="/comp1230/assignment/cont/public/?page=persons&action=doUpdate" method="post" enctype="multipart/form-data"
+                      id="needs-validation" novalidate>
+                    <div class="form-group">
+                        <label for="inputTitle">Job Title</label>
+                        <input type="text" name="jTitle" value="<?php echo $person_to_update[1];?>" class="form-control" id="inputTitle" placeholder="Job Title" required>
+                        <div class="invalid-feedback">
+                            Please provide a job title.
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputFName">First Name</label>
+                            <input type="text" name="fName" value="<?php echo $person_to_update[2];?>" class="form-control" id="inputFName" placeholder="First name" required>
+                            <div class="invalid-feedback">
+                                Please provide a first name.
+                            </div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputLName">Last Name</label>
+                            <input type="text" name="lName" value="<?php echo $person_to_update[3];?>" class="form-control" id="inputLName" placeholder="Last name" required>
+                            <div class="invalid-feedback">
+                                Please provide a last Name.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">E-mail</label>
+                            <input type="email" name="email" value="<?php echo $person_to_update[4];?>" class="form-control" id="inputEmail4" placeholder="E-mail">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputSite">Web Site</label>
+                            <input type="url" name="site" value="<?php echo $person_to_update[5];?>" class="form-control" id="inputSite" placeholder="Site">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="inputCellNumber">Cell Number</label>
+                            <input type="text" name="cellNumber" value="<?php echo $person_to_update[6];?>" class="form-control" id="inputCellNumber" placeholder="Cell Number">
+                        </div>
+                        <div class="col">
+                            <label for="inputHomeNumber">Home Number</label>
+                            <input type="text" name="homeNumber" value="<?php echo $person_to_update[7];?>" class="form-control" id="inputHomeNumber" placeholder="Home Number">
+                        </div>
+                        <div class="col">
+                            <label for="inputOfficeNumber">Office Number</label>
+                            <input type="text" name="officeNumber" value="<?php echo $person_to_update[8];?>" class="form-control" id="inputOfficeNumber" placeholder="Home Number">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputTwitterUrl">Twitter</label>
+                            <input type="url" name="twitterUrl" value="<?php echo $person_to_update[9];?>" class="form-control" id="inputTwitterUrl" placeholder="Twitter URL">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputFacebookUrl">Facebook</label>
+                            <input type="url" name="facebookUrl" value="<?php echo $person_to_update[10];?>" class="form-control" id="inputFacebookUrl" placeholder="Facebook URL">
+                        </div>
+                    </div>
+                    <label for="file1">Upload a picture</label><br>
+                    <label class="custom-file" for="file1">
+                        <input type="file" name="picture" id="file1" value="<?php echo $person_to_update[11];?>" class="custom-file-input">
+                        <span class="custom-file-control"></span>
+                    </label>
+                    <div class="form-group">
+                        <label for="comment">Comment</label>
+                        <textarea class="form-control" name="comment" id="comment" rows="1" cols="20" wrap="hard"><?php echo $person_to_update[12];?></textarea>
+                    </div>
+                    <input type="hidden" name="id" value="<?php echo $person_to_update[0]; ?>">
+                    <input name="submit" type="submit" class="btn btn-outline-secondary">
+                    <button type="button" class="btn btn-outline-secondary" onclick="goBack()">Go Back</button>
+                </form>
+            <?php else: ?>
+                <h1>Cannot find the contact</h1>
+            <?php endif; ?>
+        </div>
+    </div>
+    <script src="scripts.js"></script>

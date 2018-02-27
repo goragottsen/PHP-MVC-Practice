@@ -1,0 +1,22 @@
+<div class="jumbotron">
+        <div class="container">
+            <form>
+                <div class="row align-items-center" id="addBtn">
+                    <div class="col">
+                        <a class="btn btn-outline-secondary"  href="/comp1230/assignment/cont/public/?page=persons&action=add" role="button">Add new contact</a>
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" id="search-input" onkeyup="mySearch();"  title="Type in a name" placeholder="Search..." aria-label="Search for..." >
+                    </div>
+                </div>
+            </form>
+        </div>
+</div>
+<div class="container">
+    <table class="table table-hover" id="viewTable">
+        <?php
+        $file = $config['DATA_PATH'] . 'persons.txt';
+        displayContacts($file, 2, 3, 11, 0, $persons);
+        ?>
+    </table>
+</div>
