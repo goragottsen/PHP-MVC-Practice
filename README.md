@@ -1,5 +1,4 @@
-CONTACT
-# PHP-MVC-Practice
+#CONTACT
 A simple PHP application based on a flat file (no database).
 
 The application allows the user to:
